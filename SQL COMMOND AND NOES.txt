@@ -1,0 +1,441 @@
+
+select * from bot
+
+
+-------------------------------
+CREATE TABLE TUTIOR_Info  
+(  
+EMPID INT PRIMARY KEY,    
+FirstName VARCHAR (100)not null,    
+LastName VARCHAR (100)not null,    
+age INT NOT NULL,  
+Address Varchar(120)not null,  
+City Varchar (80)not null,  
+Salary INT NOT NULL   
+);  
+SELECT * FROM TUTIOR_Info 
+
+---------------------------------------------
+
+
+
+begin tran 
+DELETE FROM   Worker12 
+WHERE SALARY =8000;  
+-------------------------------------------------------------------------------------------
+
+CREATE TABLE  AUTO_INCREMENT(
+  id INT PRIMARY KEY ,
+  date_x VARCHAR(10) NOT NULL,
+  system_x VARCHAR(50) NOT NULL,
+  test VARCHAR(50) NOT NULL
+);
+
+--------------------------------------------------------
+INSERT INTO  AUTO_INCREMENT (id,date_x,system_x,test)
+VALUES (1,'01/03/2020','system1','hard_drive'),
+       (2,'01/04/2020','system2','memory'),
+       (3,'01/10/2020','system2','processor'),
+       (4,'01/14/2020','system3','hard drive'),
+       (5,'01/10/2020','system2','processor'),
+       (6,'01/20/2020','system4','hard drive'),
+       (7,'01/24/2020','system5','memory'),
+       (8,'01/29/2020','system6','hard drive'),
+       (9,'02/02/2020','system7','motherboard'),
+       (10,'02/04/2020','system8','graphics card'),
+       (11,'02/02/2020','system7','motherboard'),
+       (12,'02/08/2020','system9','hard drive')
+	   -----------------------------------------------------------------------------------------
+create table bot(s_id int primary key, s_name varchar(17));  
+insert into bot values(1, 'Jack');  
+insert into bot values(2, 'Rithvik');  
+insert into bot values(3, 'Jaspreet');  
+insert into bot values(4, 'Praveen');  
+insert into bot values(5, 'Bisa');  
+insert into bot values(6, 'Suraj');  
+-----------------------------------------------------------------------------
+create table number(school_id int primary key, s_id int, score int, status varchar(20));  
+insert into number values(1004, 1, 23, 'fail');  
+insert into number values(1008, 6, 95, 'pass');  
+insert into number values(1012, 2, 97, 'pass');  
+insert into number values(1016, 7, 67, 'pass');   
+insert into number values(1020, 3, 100, 'pass');  
+insert into number values(1025, 8, 73, 'pass');  
+insert into number values(1030, 4, 88, 'pass');  
+insert into number values(1035, 9,  13, 'fail');  
+insert into number values(1040, 5,  16, 'fail');  
+insert into number values(1050, 10, 53, 'pass');  
+---------------------------------------------------------------------------------------------------
+create table info(address_city varchar(20), email_ID varchar(20),    school_id int, accomplishments varchar(50));  
+  
+insert into info values('Bangalore',  'jsingh@jtp.com',  
+                                1020, 'ACM ICPC selected');  
+insert into info values('Hyderabad', 'praveen@jtp.com',  
+                                1030, 'Geek of the month');  
+insert into info values('Delhi',     'rithvik@jtp.com',  
+                                    1012, 'IOI finalist');  
+insert into info values('Chennai',   'om@jtp.com',  
+                                 1111, 'Geek of the year');  
+insert into info values('Banglore', ' suraj@jtp.com',  
+                                 1008, 'IMO finalist');  
+insert into info values('Mumbai',    'sasukeh@jtp.com',  
+                                  2211, 'Made a robot');  
+insert into info values('Ahmedabad', 'itachi@jtp.com',  
+                               1172, 'Code Jam finalist');  
+insert into info values('Jaipur',    'kumar@jtp.com',  
+                                   1972, 'KVPY finalist');  
+---------------------------------------------------------------------------------------------------
+     select s_name, score, status, address_city, email_id,  
+accomplishments from bot s inner join number m on  
+s.s_id = m.s_id inner join info d on   
+d.school_id = m.school_id;  
+-----------------------------------------------------------------------------------------------------
+select s_name, score, status, address_city,   
+email_id, accomplishments from number s,   
+bot m, info d where s.s_id = m.s_id and   
+d.school_id = m.school_id;  
+------------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS contacts;  
+CREATE TABLE contacts (  
+id INT not null unique ,  
+first_name VARCHAR (100) NOT NULL,  
+last_name VARCHAR (25)  NOT NULL,   
+    email VARCHAR (600)  NOT NULL,  
+    age VARCHAR (220)  NOT NULL  
+);  
+
+INSERT INTO contacts (id,first_name,last_name,email,age)   
+VALUES ('1' 'Kavin','Peterson','kavin.peterson@verizon.net','21'),  
+       (2 'Nick','Jonas','nick.jonas@me.com','18'),  
+       (3 'Peter','Heaven','peter.heaven@google.com','23'),  
+       (4 'Michal','Jackson','michal.jackson@aol.com','22'),  
+       (5 'Sean','Bean','sean.bean@yahoo.com','23'),  
+       (6 'Tom ','Baker','tom.baker@aol.com','20'),  
+       (7 'Ben','Barnes','ben.barnes@comcast.net','17'),  
+       (8 'Mischa ','Barton','mischa.barton@att.net','18'),  
+       (9 'Sean','Bean','sean.bean@yahoo.com','16'),  
+       (10 'Eliza','Bennett','eliza.bennett@yahoo.com','25'),  
+       (11 'Michal','Krane','michal.Krane@me.com','25'),  
+       (12 'Peter','Heaven','peter.heaven@google.com','20'),  
+       (13 'Brian','Blessed','brian.blessed@yahoo.com','20');  
+       
+INSERT INTO conacts (id,first_name,last_name,email,age) 
+( 1'Nick','Jonas','nick.jonas@me.com','18'),  
+
+
+ 
+	   select *from chill
+
+	   CREATE TABLE vegetables (  
+VEGETABLE_ID NUMBER generated BY DEFAULT AS ID ENTITY,  
+VEGETABLE_NAME VARCHAR2(100),  
+color VARCHAR2(20),  
+        PRIMARY KEY (VEGETABLE_ID)  
+);  
+-----------------------------------------------------------------------------------------------
+CREATE TABLE publicbuyer  
+(  
+    id integer NOT NULL,  
+    name text COLLATE "pg_catalog". "default" NOT NULL,  
+    age integer NOT NULL,  
+    salary real NOT NULL  
+)  
+---------------------------------------------------------------------------------
+mysql>
+ CREATE TABLE chill(ID INT PRIMARY KEY,
+  Name VARCHAR(20) not null,
+  Percentage INT not null, 
+  Location VARCHAR(20)not null, 
+  DateOfBirth DATE);    
+ mysql>
+ INSERT INTO chill (ID , Name, Percentage, Location, DateOfBirth)
+  VALUES (1 , 'Manthan Koli', 79,'Delhi', '2003-08-20'),
+         (6 , 'Dev ', 70, 'Pune', '1999-06-17'),
+         (3 , 'Aakash Deshmukh', 87, 'Mumbai', '1997-09-12'),
+	     (4 , 'Aaryan Jaiswal', 90, 'Chennai', '2005-10-02'),
+	     (5 , 'Rahul Khanna', 92, 'Ambala', '1996-03-04'); 
+		  INSERT INTO chill(ID, Name, Percentage, Location, DateOfBirth)
+		   VALUES(15, 'Manthan Koli', 79, 'Delhi', '2003-08-20'),
+		   (6, 'Dev Dixit', 75, 'Pune', '1999-06-17'), 
+		   (7, 'Aakash Deshmuk', 87, 'Mumbai', '1997-09-12'),
+		    (8, 'Aaryan Jaiswal', 90,'Chennai', '2005-10-02'),
+			 (9, 'Rahul Khanna', 92, 'Ambala', '1996-03-04'), 
+			 (11, 'Pankaj Deshmukh', 67, 'Kanpur', '2000-02-02'),
+			  (12, 'Gaurav Kumar', 84, 'Chandigarh', '1998-07-06'), 
+			  (13, 'Sanket Jain', 61, 'Shimla', '1990-09-08'), 
+			  (14, 'Sahil Wagh', 90, 'Kolkata', '1968-04-03');   
+		  
+		 ------------------------------------------------------------------------------------------------
+		-- Query:
+		 SELECT ID, Name, Percentage, Location, MONTH (DateOfBirth) AS MonthOfBirth FROM chill;  
+		-- Write a query to retrieve only the specific part of the date, i.e., month, in a more readable format from the column 'DateOfBirth'.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         --Query:
+		 SELECT ID, Name, Percentage, Location, MONTH (DateOfBirth) AS MonthOfBirth FROM chill;  
+		 ----------------------------------------------------------------------------------------
+		  --Query: for name update.......
+		   UPDATE chill SET Name = 'Mahesh Kuwar' WHERE ID =1;  
+		   -------------------------------------------------------------------------------------
+		     --Query: for delete.....
+		    DELETE FROM student WHERE ID= 6;  
+			-------------------------------------------------------------------------------------
+			 --Query: search by date of birth.....
+			SELECT *FROM chill ORDER BY DateOfBirth asc; 
+			--------------------------------------------------------------------------------------
+			--TIME DATA TYPE
+			 CREATE TABLE items_tbl(ID INT, 
+			  Item_Name VARCHAR(20),
+			  Item_Quantity INT,
+			  Item_Price INT,
+			  Item_OrderDate DATEtime,
+			  Item_OrderTime TIME); 
+			   INSERT INTO items_tbl(ID, Item_Name, Item_Quantity, Item_Price, Item_OrderDate, Item_OrderTime)
+			    VALUES(1, 'Soap', 5, 200, '2021-07-08', '04:13:52'),
+				 (2, 'Toothpaste', 2, 80, '2021-07-10', '18:09:01'), 
+				 (3, 'Pen', 10, 50, '2021-07-12', '12:00:02'), 
+				 (4, 'Bottle', 1, 250, '2021-07-13', '15:07:05'), 
+				 (5, 'Brush', 3, 90, '2021-07-15', '19:18:43'),
+				  (6, 'Notebooks', 10, 1000, '2021-07-26', '05:05:05'), 
+				  (7, 'Handkerchief', 3, 100, '2021-07-28', '10:08:12'), 
+				  (8, 'Chips Packet', 5, 50, '2021-07-30', '08:16:58'),
+				   (9, 'Marker', 2, 30, '2021-08-13', '02:18:32'),
+				    (10, 'Scissors', 1, 60, '2021-08-13', '07:17:30'); 
+					
+					
+		--------------------------------------------------------------------------
+		SELECT *FROM items_tbl;  
+		---------------------------------------------------------------------------
+		--Write a query to retrieve all the values from the item_tbl and the order time of items in a 12-hour format along with the AM/ PM to retrieve the time values in a more readable format.
+
+         --Query:	
+		 SELECT ID, Item_Name, Item_Quantity, Item_Price, Item_OrderDate, TIME_FORMAT (Item_OrderTime, '%r') AS Formatted_Time FROM items_tbl; 	
+		 -------------------------------------------------------------------------------------------------------------
+		 --index
+		 CREATE INDEX Item_Name ON items_tbl (Item_Quantity);  	
+		  ------------------------------------------------------------------------------
+		--  Unique index 
+		CREATE UNIQUE INDEX  Item_OrderTime ON items_tbl (Item_OrderTime );  
+		----------------------------------------------------------------------------------------
+		----------------------------------------------------------------------------------------
+		--TIME DATA TYPE
+			 CREATE TABLE items_l(ID INT, 
+			  Item_Name VARCHAR(20),
+			  Item_Quantity INT,
+			  Item_Price INT,
+			  Item_OrderDate DATEtime,
+			  Item_OrderTime TIME);
+			  INSERT INTO items_l(ID, Item_Name, Item_Quantity, Item_Price, Item_OrderDate, Item_OrderTime)
+			    VALUES(1, 'Soap', 5, 200, '2021-07-08', '04:13:52'),
+				 (2, 'Toothpaste', 2, 80, '2021-07-10', '18:09:01'), 
+				 (3, 'Pen', 10, 50, '2021-07-12', '12:00:02'), 
+				 (4, 'Bottle', 1, 250, '2021-07-13', '15:07:05'), 
+				 (5, 'Brush', 3, 90, '2021-07-15', '19:18:43'),
+				  (6, 'Notebooks', 10, 1000, '2021-07-26', '05:05:05'), 
+				  (7, 'Handkerchief', 3, 100, '2021-07-28', '10:08:12'), 
+				  (8, 'Chips Packet', 5, 50, '2021-07-30', '08:16:58'),
+				   (9, 'Marker', 2, 30, '2021-08-13', '02:18:32'),
+				    (10, 'Scissors', 1, 60, '2021-08-13', '07:17:30'); 
+		
+		--Write a query to retrieve all the values from the item_tbl and the order time of items in a 12-hour format along with the AM/ PM to retrieve the time values in a more readable format.
+
+         --Query:
+BEGIN
+	declare @Item_OrderDate datetime = '2021-09-26 00:00:00'
+	select FORMAT(@Item_OrderDate,'mm/dd/yyyy 00:00:00 pm/am')
+END
+
+---------------------------------------------------------------------------------------------------------------
+-----CONVERT  
+CREATE TABLE ord(  
+    order_id INTEGER PRIMARY KEY IDENTITY,  
+    customer_id INTEGER,  
+    item TEXT,  
+    price FLOAT,  
+    prchase_date DATE  
+);  
+INSERT INTO ord (customer_id, item, price, prchase_date)  
+    VALUES (1345, 'Laptop', 65000.00, '2021-04-26'),  
+    (2432, 'Mobile', 25000.00, '2021-04-06'),  
+    (1213, 'Hard Disk', 3000.00, '2021-04-16'),  
+    (3213, 'Mouse', 1250.00, '2021-04-16'),  
+    (4313, 'Modem', 3000.00, '2021-04-26');  
+-------------------------------------------------------------------------
+	SELECT * FROM ORD
+--------------------------------------------------------------------------
+SELECT * FROM ord     
+WHERE prchase_date     
+> = CONVERT(DATETIME, '2021-04-10') AND prchase_date <= CONVERT(DATETIME, '2021-04-20'); 
+--------------------------------------------------------------------------
+IF OBJECT_ID('Manager') IS NOT NULL DROP TABLE Manager
+GO
+create table Manager (ManagerId int ,
+                        first_name varchar(30),
+						score float);  
+						
+insert into Manager_  values(1, 'Rithvik','69.3');  
+insert into Manager_ values(2, 'Jaspreet','96.7');  
+insert into  Manager_ values(3, 'Praveen', '93.5');  
+insert into  Manager_ values(4, 'jai', '92.2');
+
+SELECT * FROM Manager_
+-----------------------------------------------------------------------------
+SELECT first_name, ROUND(score,2) as _Score FROM Manager;  
+-----------------------------------------------------------------------------------
+--TRY CONVERT faild
+SELECT   
+    CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
+    THEN 'Cast failed'  
+    ELSE 'Cast succeeded'  
+END AS Result;  
+GO  
+
+--CASE 2 return null
+SET DATEFORMAT dmy;  
+SELECT TRY_CONVERT(datetime2, '12/31/2023') AS Result;  
+GO  
+-- try convert sucesses
+SET DATEFORMAT mdy;  
+SELECT TRY_CONVERT(datetime2, '01/18/2023') AS Result;  
+GO  
+--------------------------------------------------------------------------------------------------------------
+
+--TRY CAST  returns FAILD
+SELECT   
+    CASE WHEN TRY_CAST('test' AS float) IS NULL   
+    THEN 'Cast failed'  
+    ELSE 'Cast succeeded'  
+END AS Result;  
+GO  
+-----------------------------------------------------------------------------------------------------------
+--TRY  CAST RETURN NULL 
+SET DATEFORMAT dmy;  
+SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
+GO 
+-------------------------------------------------------------------------------------------------------------
+--TRY CAST SUCESSES
+SET DATEFORMAT mdy;  
+SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
+GO  
+-------------------------------------------------------------------------------------------------------------
+--CLUSTER 
+CREATE CLUSTER <Cluster Name> 
+(<Column> <Data Type> 
+[, <Column> <Data Type> ] . . . . . )
+[<Other Options >]
+
+create table branch_master 
+( 
+"branch_code" varchar(10) PRIMARY KEY, 
+"branch_name" varchar(15)
+);
+
+SELECT*FROM branch_master 
+
+-- LET DO THE CLUSTERING FOR ABOVE TABLE CREATED 
+create  
+( branch_info
+"branch_code" varchar(10)
+);
+---EX2
+USE ite;  
+GO   
+CREATE TABLE ite  
+    (TestCol1 int NOT NULL,  
+     TestCol2 nchar(10) NULL,  
+     TestCol3 nvarchar(50) NULL);  
+GO  
+-- Create a clustered index called IX_TestTable_TestCol1  
+-- on the dbo.TestTable table using the TestCol1 column.  
+CREATE CLUSTERED INDEX IX_TestTable_TestCol1   
+    ON dbo.TestTable (TestCol1);   
+GO
+
+
+--NON CLUSTER
+USE Manager ;  
+GO  
+-- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
+IF EXISTS (SELECT name FROM sys.indexes  
+            WHERE name = N'IX_ProductVendor_VendorID')   
+    DROP INDEX IX_ProductVendor_VendorID ON Purchasing.ProductVendor;   
+GO  
+-- Create a nonclustered index called IX_ProductVendor_VendorID   
+-- on the Purchasing.ProductVendor table using the BusinessEntityID column.   
+CREATE NONCLUSTERED INDEX IX_ProductVendor_VendorID   
+    ON Purchasing.ProductVendor (BusinessEntityID);   
+GO
+-----------------------------------------------------------------------------------------
+--filterd index
+USE test;
+GO
+
+DROP INDEX IF EXISTS FIBillOfMaterialsWithEndDate
+    ON Production.BillOfMaterials
+GO
+
+CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate
+    ON Production.BillOfMaterials (ComponentID, StartDate)
+    WHERE EndDate IS NOT NULL ;
+GO
+-------------------------------------------------------------------------------------------------------
+--SELECT STATMENT QUERY HINT 
+--Logon triggers fire stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of SQL Server. Logon triggers fire after the authentication phase of logging in finishes, but before the user session is actually established. Therefore, all messages originating inside the trigger that would typically reach the user, such as error messages and messages from the PRINT statement, are diverted to the SQL Server error log. Logon triggers do not fire if authentication fails.
+
+--You can use logon triggers to audit and control server sessions, such as by tracking login activity, restricting logins to SQL Server, or limiting the number of sessions for a specific login. For example, in the following code, the logon trigger denies log in attempts to SQL Server initiated by login login_test if there are already three user sessions created by that login.
+USE master;  
+GO  
+CREATE LOGIN login_test WITH PASSWORD = N'3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
+    CHECK_EXPIRATION = ON;  
+GO  
+GRANT VIEW SERVER STATE TO login_test;  
+GO  
+CREATE TRIGGER connection_limit_trigger  
+ON ALL SERVER WITH EXECUTE AS N'login_test'  
+FOR LOGON  
+AS  
+BEGIN  
+IF ORIGINAL_LOGIN()= N'login_test' AND  
+    (SELECT COUNT(*) FROM sys.dm_exec_sessions  
+            WHERE is_user_process = 1 AND  
+                original_login_name = N'login_test') > 3  
+    ROLLBACK;  
+END;
+
+-----------------------------------------------------------------------------------------------------
+--To capture XML data about LOGON events for use inside logon triggers, use the EVENTDATA function. The LOGON event returns the following event data schema:
+
+--<EVENT_INSTANCE>
+
+--<EventType>event_type</EventType>
+
+--<PostTime>post_time</PostTime>
+
+--<SPID>spid</SPID>
+
+--<ServerName>server_name</ServerName>
+
+--<LoginName>login_name</LoginName>
+
+--<LoginType>login_type</LoginType>
+
+--<SID>sid</SID>
+
+--<ClientHost>client_host</ClientHost>
+
+--<IsPooled>is_pooled</IsPooled>
+
+--</EVENT_INSTANCE>
+
+--<EventType>
+--
+--Contains the time when a session is requested to be established.
+
+--<SID>
+--Contains the base 64-encoded binary stream of the security identification number (SID) for the specified login name.
+
+--<ClientHost>
+--Contains the host name of the client from where the connection is made. The value is '<local_machine>' if the client and server name are the same. Otherwise, the value is the IP address of the client.
+
+--<IsPooled>
+--Is 1 if the connection is reused by using connection pooling. Otherwise, the value is 0.
+-------------------------------------------------------------------------------------------------------------
